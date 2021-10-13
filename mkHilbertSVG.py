@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import math
-FILE = open("pulame.svg", "w")
+FILE = open("hilbert.svg", "w")
 
 SIZE    = 128
-LEVEL   = 3
+LEVEL   = 5
 
 SEED = [(0,0),(0,1),(1,1),(1,0)]
 PATH = SEED
@@ -26,5 +26,5 @@ for k in range(0, LEVEL):
     PATH = hamilton(PATH);
 
 print(dstring)
-svgstring = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"%d %d\" style=\"background-color:#000; margin: 1em;\">\n<path d=\"%s\" stroke=\"blue\" stroke-width=\"4px\" fill=\"none\"/>\n</svg>" % (SIZE, SIZE, dstring[LEVEL-1])
+svgstring = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"%d %d\" style=\"background-color:#000; margin: 1em;\">\n<path d=\"%s\" stroke=\"yellow\" stroke-width=\"1px\" fill=\"none\"/>\n</svg>" % (SIZE, SIZE, dstring[LEVEL-1])
 FILE.write(svgstring)
